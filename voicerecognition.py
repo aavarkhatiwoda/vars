@@ -57,7 +57,6 @@ if __name__ == "__main__":
 				exit(0)
 
 			elif 'you there' in command:
-				#speak('At your service, sir.')
 				speak('At your service, sir')
 
 			elif 'my name' in command:
@@ -65,7 +64,6 @@ if __name__ == "__main__":
 				
 			elif 'open ' in command or 'go to ' in command:
 				command = command[len(name)+1:]
-				#command = command.replace(' ', '+')
 				search = requests.get(f'https://www.google.com/search?client=firefox-b-1-d&q={command}', headers = headers)
 				soup = BeautifulSoup(search.text, 'html.parser')
 
@@ -77,7 +75,6 @@ if __name__ == "__main__":
 					print('invalid')
 
 			elif 'weather' in command or 'temperature' in command or 'forecast' in command or 'hot' in command or 'cold' in command:
-				#speak(getWeather(text))
 				command = command[len(name)+1:]
 				speak( functions['getWeather'](command) )
 

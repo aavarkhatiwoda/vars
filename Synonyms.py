@@ -54,26 +54,4 @@ if __name__ == '__main__':
 		getSynonyms(get_audio())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #
